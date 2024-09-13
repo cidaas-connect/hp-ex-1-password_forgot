@@ -25,9 +25,16 @@
             <!-- Step 6: Add a form with id="verification-form". It should post to https://connect-prod.cidaas.eu/users-srv/resetpassword/validatecode 
              The form should contain an input element id="verification-input" of type text, which collects the user input code.
              It will also need to contain a hidden verification-input of name resetRequestId & a Validate Button to submit the form-->
-
-
+             <form id="verification-form" class="hidden" action="https://connect-prod.cidaas.eu/users-srv/resetpassword/validatecode" method="POST">
+                <div class="mat-form-field">
+                    <label for="verification-input" class="mat-form-field-label">Enter verification code:</label>
+                    <input type="text" id="verification-input" name="code" class="mat-input-element" required>
+                </div>
+                <input type="hidden" id="reset-request-id" name="resetRequestId">
+                <button type="submit" class="mat-raised-button mat-primary">Validate Code</button>
+            </form>
              <!-- Step 8: Add a cancel button which redirects back to the authz-->
+             <button id="cancel-button" class="mat-button mat-warn hidden">Cancel</button>
         </div>
     </div>
     <script src="javascripts/index.js"></script>
