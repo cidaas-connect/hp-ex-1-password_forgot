@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" id="appFavicon" href="https://cdn.cidaas.de/images/logo-single.png">
+</head>
+<body class="mat-typography">
+    <div id="background"></div>
+    <div class="mat-app-background">
+        <div class="container mat-elevation-z8">
+            <h1 class="mat-h1">Reset Password</h1>
+            <div id="error-message" class="mat-error hidden"></div>
+            <div id="email-display" class="hidden">
+                <p class="mat-body-1">Reset password for:</p>
+                <p class="mat-body-2" id="user-email"></p>
+            </div>
+            <div id="email-form" class="hidden mat-form-field">
+                <label for="email-input" class="mat-form-field-label">Enter your email:</label>
+                <input type="email" id="email-input" class="mat-input-element" required>
+            </div>
+            <button id="reset-button" class="mat-raised-button mat-primary">Reset Password</button>
+            <!-- Step 6: Add a form with id="verification-form". It should post to https://connect-prod.cidaas.eu/users-srv/resetpassword/validatecode 
+             The form should contain an input element id="verification-input" of type text, which collects the user input code.
+             It will also need to contain a hidden verification-input of name resetRequestId & a Validate Button to submit the form-->
+
+
+             <!-- Step 8: Add a cancel button which redirects back to the authz-->
+        </div>
+    </div>
+    <script src="javascripts/index.js"></script>
+</body>
+</html>
